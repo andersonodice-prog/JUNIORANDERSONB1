@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JuniorAndersonB1 — Street Fashion</title>
+  <meta name="description" content="JuniorAndersonB1 — Independent streetwear brand focused on premium-quality clothing, exclusive drops, and modern urban fashion." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="canonical" href="https://example.com/" />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "JuniorAndersonB1",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png"
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0d0d0d;
+      --card:#1f1f1f;
+      --muted:#cfcfcf;
+      --accent:#ffd700;
+      --max-width:1100px;
+      --gap:1.25rem;
+      --radius:10px;
+      --container-padding:1.25rem;
+      font-size:16px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background:var(--bg);
+      color:#fff;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    a{color:inherit}
+    a:focus{outline:3px solid rgba(255,215,0,.25);outline-offset:3px}
+    .skip-link{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip-link:focus{
+      left:1rem;
+      top:1rem;
+      width:auto;
+      height:auto;
+      padding:.5rem .75rem;
+      background:#000;
+      color:#fff;
+      border-radius:6px;
+      z-index:1000;
+    }
+
+    header{
+      background:#000;
+      padding:1rem var(--container-padding);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      position:sticky;
+      top:0;
+      z-index:40;
+    }
+    .brand{display:flex;align-items:center;gap:.75rem}
+    .brand h1{
+      color:var(--accent);
+      font-size:1.125rem;
+      letter-spacing:.5px;
+    }
+    nav[role="navigation"] ul{
+      list-style:none;
+      display:flex;
+      gap:1.25rem;
+      align-items:center;
+    }
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      font-size:.95rem;
+    }
+    nav a:focus, nav a:hover{opacity:.95}
+
+    .hero{
+      text-align:center;
+      padding:6.25rem 1rem;
+      background:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45));
+      color:#fff;
+    }
+    .hero__media{
+      width:100%;
+      max-width:1400px;
+      height:420px;
+      margin:0 auto 1.25rem;
+      border-radius:12px;
+      overflow:hidden;
+      background:#222;
+    }
+    .hero__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .hero h2{font-size:clamp(1.5rem,4vw,3rem);margin-bottom:.5rem}
+    .hero p{color:var(--muted);font-size:1rem;margin-bottom:1.25rem}
+
+    .btn{
+      background:var(--accent);
+      color:#000;
+      padding:.9rem 1.25rem;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:700;
+      display:inline-block;
+      box-shadow:0 6px 18px rgba(0,0,0,.45);
+    }
+    .btn:focus{outline:3px solid rgba(255,215,0,.35);outline-offset:3px}
+
+    main{max-width:var(--max-width);margin:0 auto;padding:3rem var(--container-padding)}
+    section + section{margin-top:2.5rem}
+    h2.section-title{font-size:1.25rem;margin-bottom:1rem;color:#fff}
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:var(--gap);
+    }
+
+    .card{
+      background:var(--card);
+      padding:1rem;
+      border-radius:var(--radius);
+      text-align:center;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+      margin-bottom:.75rem;
+      background:#333;
+    }
+    .card h3{font-size:1rem;margin-bottom:.25rem}
+    .price{color:var(--muted);font-weight:700}
+
+    .about p{color:var(--muted)}
+    footer{
+      background:#000;
+      text-align:center;
+      padding:1.25rem;
+      margin-top:2rem;
+      border-top:1px solid rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+
+    /* Responsive tweaks */
+    @media (min-width:900px){
+      .hero{padding:8rem 1rem}
+      .card img{height:260px}
+      .hero__media{height:520px}
+    }
+
+    /* Utility */
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 var(--container-padding)}
+    .sr-only{position:absolute;left:-999rem}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header role="banner" aria-label="Top header">
+    <div class="brand">
+      <h1>JuniorAndersonB1</h1>
+    </div>
+
+    <nav role="navigation" aria-label="Primary" >
+      <ul>
+        <li><a href="#" aria-current="page">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1400&q=80&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=1400&q=80" alt="">
+        </picture>
+      </div>
+
+      <h2 id="hero-title">Street Fashion. Premium Quality.</h2>
+      <p>Official clothing brand by JuniorAndersonB1.</p>
+      <a class="btn" href="#shop">Shop Now</a>
+    </section>
+
+    <section id="shop" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">Featured Collection</h2>
+
+        <div class="products" role="list">
+          <article class="card" role="listitem" aria-labelledby="p1-title">
+            <figure>
+              <img src="https://via.placeholder.com/800x800" srcset="https://via.placeholder.com/600x600 600w, https://via.placeholder.com/800x800 800w" sizes="(min-width:900px) 260px, 33vw" alt="Graphic T-Shirt — black with logo" loading="lazy" width="800" height="800">
+              <figcaption class="sr-only">Graphic T-Shirt — black with logo</figcaption>
+            </figure>
+            <h3 id="p1-title">Graphic T-Shirt</h3>
+            <p class="price" aria-label="Price">$34.99</p>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="p2-title">
+            <figure>
+              <img src="https://via.placeholder.com/800x800" srcset="https://via.placeholder.com/600x600 600w, https://via.placeholder.com/800x800 800w" sizes="(min-width:900px) 260px, 33vw" alt="Premium Hoodie — charcoal" loading="lazy" width="800" height="800">
+              <figcaption class="sr-only">Premium Hoodie — charcoal</figcaption>
+            </figure>
+            <h3 id="p2-title">Premium Hoodie</h3>
+            <p class="price" aria-label="Price">$64.99</p>
+          </article>
+
+          <article class="card" role="listitem" aria-labelledby="p3-title">
+            <figure>
+              <img src="https://via.placeholder.com/800x800" srcset="https://via.placeholder.com/600x600 600w, https://via.placeholder.com/800x800 800w" sizes="(min-width:900px) 260px, 33vw" alt="Street Hat — black snapback" loading="lazy" width="800" height="800">
+              <figcaption class="sr-only">Street Hat — black snapback</figcaption>
+            </figure>
+            <h3 id="p3-title">Street Hat</h3>
+            <p class="price" aria-label="Price">$29.99</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">About JuniorAndersonB1</h2>
+        <p>
+          JuniorAndersonB1 is an independent streetwear brand focused on premium-quality clothing, exclusive drops, and modern urban fashion. Our goal is to create clothing that represents confidence, ambition, and originality.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" style="margin-top:1.5rem">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Contact</h2>
+        <p style="color:var(--muted)">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© 2026 JuniorAndersonB1. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
